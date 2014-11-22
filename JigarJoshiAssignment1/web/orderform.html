@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Pizza Order Form</title>
+    </head>
+    <body>
+        <h1>Pizza Order Form</h1>
+        <form method="post" action='addToCart.html' style="display:inline;">
+            <p><label id="lblCustomerId" for="txtCustId">Customer ID:</label>
+                <input type="text" id="txtCustId" name="custId" /></p>
+            
+            <p><label id="lblCustomerName" for="txtCustName">Customer Name:</label>
+                <input type="text" id="txtCustName" name="custName" /></p>
+            
+            <p>Size:
+            <input type="radio" name="radius" value='6' />6
+            <input type="radio" name="radius" value='9' />9
+            <input type="radio" name="radius" value='12' />12 </p>
+            <p>Toppings:
+                <select name="top" size="4" multiple>
+                    <option value="Pepperoni">Pepperoni</option>
+                    <option value="Mushrooms">Mushrooms</option>
+                    <option value="Green Pepper">Green Pepper</option>
+                </select> </p>
+                <br /><input type="submit" name="addCart" value='Add To Cart' />
+        </form> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <form style="display: inline;" method="post" action="showCart.html">
+            <input type="submit" name="showCart" value="Show Cart" disabled/>
+        </form> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <form style="display:inline;" method="post" action="checkout.html">
+            <input type="submit" name="checkout" value="Checkout" disabled/>
+        </form>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <form style="display:inline;" method="post" action="invalidate.html">
+            <input type="submit" name="cancel" value="Cancel Order" />
+        </form>
+        
+        <p>No Of Pizza in Cart: 0</p>
+    </body>
+</html>
+
